@@ -5,8 +5,6 @@
 ![event_bridge.png](event_bridge.png)
 
 
-#!/bin/bash
-
 # Install AWS CLI
 ~~~
 brew install awscli
