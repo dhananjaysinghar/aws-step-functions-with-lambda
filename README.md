@@ -1,3 +1,9 @@
++----------------+         +-----------------+         +------------+         +------------+
+| AWS EventBridge| ----->  |  StepFunction   | ----->  | Lambda_1   | ----->  | Lambda_2   |
+|    (Scheduler) |         |                 |         |            |         |            |
++----------------+         +-----------------+         +------------+         +------------+
+
+
 ## Create a Step Function
 ![step_function.png](step_function.png)
 
