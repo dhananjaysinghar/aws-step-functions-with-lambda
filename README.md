@@ -55,10 +55,10 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ~~~
 
-# Create zip file
+# Create zip file (create separate folder app-1 and app-2 and write logic inside handler.py)
 ~~~
-zip app-1.zip lambda_1.py
-zip app-1.zip lambda_2.py
+zip app-1.zip handler.py
+zip app-2.zip handler.py
 ~~~
 
 ## GitHub Repository
