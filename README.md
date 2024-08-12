@@ -1,24 +1,7 @@
-```mermaid
-flowchart TD
-    A[AWS EventBridge (Scheduler)] --> B[StepFunction]
-    B --> C[Lambda_1]
-    C --> D[Lambda_2]
-
-### Diagram Using a Visual Tool
-
-For more complex or customizable diagrams, you can use tools like Lucidchart, Draw.io (now diagrams.net), or even Microsoft Visio. Here’s a quick guide for creating a diagram using [diagrams.net](https://app.diagrams.net):
-
-1. **Open diagrams.net** and start a new diagram.
-2. **Drag and drop shapes** to represent the different components:
-   - **Rectangle** for AWS EventBridge (Scheduler)
-   - **Circle** for StepFunction
-   - **Oval** for Lambda functions
-3. **Label the shapes** appropriately: AWS EventBridge, StepFunction, Lambda_1, Lambda_2.
-4. **Draw arrows** to connect the shapes in the sequence: EventBridge → StepFunction → Lambda_1 → Lambda_2.
-5. **Customize the colors and styles** to enhance the visual appeal.
-6. **Save or export** the diagram as an image (e.g., PNG or JPEG) and include it in your documentation.
-
-
+A[EventBridge (Scheduler)] 
+        --> B[Step Function]
+            B --> C[Lambda Function 1]
+                B --> D[Lambda Function 2]
 
 ## Create a Step Function
 ![step_function.png](step_function.png)
