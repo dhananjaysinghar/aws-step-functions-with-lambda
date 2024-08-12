@@ -211,7 +211,8 @@ aws scheduler create-schedule \
     --target "Arn=arn:aws:states:ap-south-1:010526274468:stateMachine:MyStateMachine,RoleArn=arn:aws:iam::010526274468:role/StepFunctionsExecutionRole,Input='{}',RetryPolicy={MaximumRetryAttempts=1}"
 ~~~
 
-#!/bin/bash
+---
+---
 
 # Delete Step Function Schedule
 ~~~
