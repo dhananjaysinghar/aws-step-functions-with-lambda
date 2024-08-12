@@ -55,7 +55,7 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ~~~
 
-# Create zi file
+# Create zip file
 ~~~
 zip app-1.zip lambda_1.py
 zip app-1.zip lambda_2.py
