@@ -1,7 +1,8 @@
-+----------------+         +-----------------+         +------------+         +------------+
-| AWS EventBridge| ----->  |  StepFunction   | ----->  | Lambda_1   | ----->  | Lambda_2   |
-|    (Scheduler) |         |                 |         |            |         |            |
-+----------------+         +-----------------+         +------------+         +------------+
+```mermaid
+flowchart TD
+    A[AWS EventBridge (Scheduler)] --> B[StepFunction]
+    B --> C[Lambda_1]
+    C --> D[Lambda_2]
 
 
 ## Create a Step Function
