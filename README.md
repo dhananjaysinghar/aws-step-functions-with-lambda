@@ -55,6 +55,17 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ~~~
 
+# Create zi file
+~~~
+zip app-1.zip lambda_1.py
+zip app-1.zip lambda_2.py
+~~~
+
+## GitHub Repository
+For more details, source code, and related resources, please visit the GitHub repository:
+[python-multi-module-app](https://github.com/dhananjaysinghar/python-multi-module-app)
+
+
 # Create the first Lambda function
 ~~~
 aws lambda create-function \
