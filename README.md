@@ -1,7 +1,4 @@
-A[EventBridge (Scheduler)] 
-        --> B[Step Function]
-            B --> C[Lambda Function 1]
-                B --> D[Lambda Function 2]
+EventBridge (Scheduler) --> [Step Function] --> [Lambda Function 1] --> [Lambda Function 2]
 
 ## Create a Step Function
 ![step_function.png](step_function.png)
