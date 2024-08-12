@@ -1,0 +1,51 @@
+{
+  "Comment": "My state machine",
+  "StartAt": "Upload to s3",
+  "States": {
+    "Upload to s3": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-south-1:010526274468:function:upload-to-s3",
+      "Parameters": {},
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "Wait"
+    },
+    "Wait": {
+      "Type": "Wait",
+      "Seconds": 50,
+      "Next": "Delete from s3"
+    },
+    "Delete from s3": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-south-1:010526274468:function:delete-from-s3",
+      "Parameters": {
+        "Payload": {}
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "End": true
+    }
+  }
+}
